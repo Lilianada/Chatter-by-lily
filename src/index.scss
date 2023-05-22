@@ -1,5 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+//Colors
 $primary: #ACA0F8;
 $black: #1C1C1C;
 $white: #FFFFFF;
 $gray: #F5F5F5;
 $secondary: #E9E7FD;
+
+@font-face {
+    font-family: 'Megan';
+    src: url('../src/assets/megan-font/Megan.woff2') format('woff2'),
+         url('../src/assets/megan-font/Megan.woff') format('woff');
+  }
+  
+
+//Font Family19
+$font-text: 'Poppins', sans-serif;
+$font-logo: 'Megan', sans-serif;
+
+//Font Sizes
+$font-ten: 10px;
+$font-twelve: 12px;
+$font-fourteen: 14px;
+$font-sixteen: 16px;
+$font-eighteen: 18px;
+$font-twenty: 20px;
+$font-twentyTwo: 22px;
+$font-twentyFour: 24px;
+$font-twentySix: 26px;
+$font-twentyEight: 28px;
+$font-thirty: 30px;
+$font-thirtyTwo: 32px;
+$font-thirtyFour: 34px;
+$font-thirtySix: 36px;
+$font-thirtyEight: 38px;
+
+//Font Weights
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+
+//Line Heights
+$line-height-1: 1;
+$line-height-1-2: 1.2;
+$line-height-1-4: 1.4;
+$line-height-1-6: 1.6;
+$line-height-1-8: 1.8;
+$line-height-2: 2;
+
+//Spacing
+$spacing-1: 1px;
+$spacing-2: 2px;
+$spacing-4: 4px;
+
+//Border Radius
+$border-radius-1: 1px;
+$border-radius-2: 2px;
+
+//Box Shadows
+$box-shadow-1: 1px 1px 2px rgba(0, 0, 0, 0.25);
+$box-shadow-2: 2px 2px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-3: 3px 3px 6px rgba(0, 0, 0, 0.25);
+
+//Z-Index
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 3;
+
+//Breakpoints
+$breakpoint-1: 320px;
+$breakpoint-2: 480px;
+$breakpoint-3: 768px;
+$breakpoint-3: 900px;
+$breakpoint-4: 1024px;
+$breakpoint-5: 1200px;
+$breakpoint-6: 1440px;
+$breakpoint-7: 1600px;
+$breakpoint-8: 1920px;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $font-family;
+    font-size: $font-sixteen;
+    font-weight: $font-weight-400;
+    line-height: $line-height-1-6;
+    color: $black;
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
