@@ -1,0 +1,102 @@
+@import "../../../index.scss";
+
+.unauthorized__header {
+    background-color: $black;
+    width: 100%;
+
+    .desktop__header {
+        display: none;
+    }
+
+    .mobile__header {
+        padding: 1rem;
+        height: 4rem;
+
+        .header__logo {
+            height: 2rem;
+            display: flex;
+            align-items: center;
+
+            .logo {
+                width: 2rem;
+            }
+
+            .logo__name {
+                color: $primary;
+                font-size: $font-twentySix;
+                font-weight: $font-weight-700;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-4) {
+        .desktop__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            width: 90%;
+            margin: 0 auto;
+
+            .header__logo {
+                height: 2rem;
+                display: flex;
+                align-items: center;
+
+                .logo {
+                    width: 2rem;
+                }
+
+                .logo__name {
+                    color: $primary;
+                    font-size: $font-twentySix;
+                    font-weight: $font-weight-700;
+                    margin-left: 0.5rem;
+                }
+            }
+
+            .nav__bar {
+                .nav__list {
+                    display: flex;
+                    align-items: center;
+
+                    .nav__item {
+                        margin-left: 1rem;
+
+                        .nav__link {
+                            color: $white;
+                            font-size: $font-sixteen;
+                            font-weight: $font-weight-400;
+                            line-height: $line-height-1-6;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+
+                        .nav__link--active {
+                            color: $primary;
+                        }
+
+                        .nav__button{
+                            padding: .5rem 1rem;
+                            border-radius: 0.5rem;
+                            background-color: $primary;
+                            color: $white;
+                            font-size: $font-sixteen;
+                            font-weight: $font-weight-500;
+                            transition: all 0.3s ease-in-out;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .mobile__header {
+            display: none;
+        }
+    }
+}
