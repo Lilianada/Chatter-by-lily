@@ -15,8 +15,8 @@ $secondary: #E9E7FD;
   
 
 //Font Family19
-$font-text: 'Poppins', sans-serif;
 $font-logo: 'Megan', sans-serif;
+$font-text: 'Poppins', sans-serif;
 
 //Font Sizes
 $font-ten: 10px;
@@ -89,7 +89,7 @@ $breakpoint-8: 1920px;
 }
 
 body{
-    font-family: $font-family;
+    font-family: $font-text;
     font-size: $font-sixteen;
     font-weight: $font-weight-400;
     line-height: $line-height-1-6;
