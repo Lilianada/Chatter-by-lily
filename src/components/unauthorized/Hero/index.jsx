@@ -3,7 +3,7 @@ import "./style.scss";
 
 export default function Hero() {
   return (
-    <div className="hero__component">
+    <section className="hero__component">
       <div className="hero__content">
         <div className="hero__text">
           <h1 className="hero__title">
@@ -22,6 +22,6 @@ export default function Hero() {
         <button className="hero__button">Get started now</button>
         <div className="hero__image"></div>
       </div>
-    </div>
+    </section>
   );
 }

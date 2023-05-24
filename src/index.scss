@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 //Colors
 $primary: #ACA0F8;
 $black: #181a21 ;
 $white: #FFFFFF;
-$gray: #aca9a9;
+$gray: #827f7f;
 $secondary: #E9E7FD;
 
 @font-face {
@@ -16,7 +16,7 @@ $secondary: #E9E7FD;
 
 //Font Family19
 $font-logo: 'Megan', sans-serif;
-$font-text: 'Poppins', sans-serif;
+$font-text: 'DM Sans', sans-serif;
 
 //Font Sizes
 $font-ten: 10px;
@@ -148,4 +148,10 @@ input{
     padding: 0 15px;
 }
 
-
+.body__container{
+    display: grid;
+    grid-template-columns: 65% 28%;
+    gap: 5rem;
+    width: 90%;
+    margin: 3rem auto;
+}
