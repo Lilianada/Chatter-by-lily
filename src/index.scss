@@ -4,7 +4,7 @@
 $primary: #ACA0F8;
 $black: #181a21 ;
 $white: #FFFFFF;
-$gray: #F5F5F5;
+$gray: #aca9a9;
 $secondary: #E9E7FD;
 
 @font-face {
@@ -34,6 +34,7 @@ $font-thirtyTwo: 32px;
 $font-thirtyFour: 34px;
 $font-thirtySix: 36px;
 $font-thirtyEight: 38px;
+$font-fiftySix: 56px;
 
 //Font Weights
 $font-weight-300: 300;
@@ -100,6 +101,19 @@ body{
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $font-logo;
+    font-weight: $font-weight-400;
+    line-height: $line-height-1-6;
+    margin: 0;
+    padding: 0;
 }
 
 a{

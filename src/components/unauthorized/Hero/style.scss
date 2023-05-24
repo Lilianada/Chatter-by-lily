@@ -1,0 +1,69 @@
+@import "../../../index.scss";
+
+.hero__component{
+    background-color: $white;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    background-image: url('../../../assets/imgs/HeroBg.svg');
+
+    .hero__content{
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-6){
+            width: 80%;
+        }
+
+        .hero__text{
+            width: 90%;
+            margin: 0 auto;
+
+            .hero__title{
+                font-size: $font-fiftySix;
+                font-weight: $font-weight-700;
+                color: $black;
+                text-align: center;
+                margin-bottom: 1rem;
+    
+                .hero__title_colored{
+                    color: $primary;    
+                }
+            }
+
+            .hero__description{
+                font-family: $font-text;
+                font-size: $font-twentyFour;
+                font-weight: $font-weight-400;
+                color: $gray;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+
+
+        .hero__button{
+            background-color: $black;
+            color: $white;
+            // font-family: $font-logo;
+            font-size: $font-twenty;
+            font-weight: $font-weight-400;
+            display: block;
+            height: 4rem;
+            width: 14rem;
+            margin-top: 1rem;
+            // padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+
+            &:hover{
+                background-color: $primary;
+            }
+        }
+    }
+}
