@@ -5,6 +5,8 @@
     width: 100%;
     height: calc(100vh - 6rem);
     background-image: url('../../../assets/imgs/HeroBg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .hero__content{
         width: 90%;
