@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <Header />
       <Hero/>
-      <div className='body__container'>
+      <div className='body__grid'>
         <FeaturedPosts/>
         <Sidebar />
       </div>

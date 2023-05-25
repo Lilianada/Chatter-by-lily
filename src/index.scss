@@ -148,10 +148,10 @@ input{
     padding: 0 15px;
 }
 
-.body__container{
+.body__grid{
     display: grid;
     grid-template-columns: 65% 28%;
     gap: 5rem;
     width: 90%;
-    margin: 3rem auto;
+    margin: 5rem auto;
 }
