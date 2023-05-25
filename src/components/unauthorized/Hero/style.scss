@@ -4,10 +4,16 @@
     background-color: $white;
     width: 100%;
     height: calc(100vh - 6rem);
-    background-image: url("../../../assets/imgs/Bg.svg");
+    background-image: url("../../../assets/imgs/HeroBg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @media screen and (min-width: $breakpoint-4) {
+        background-image: url("../../../assets/imgs/Bg3.svg");
+        // height: calc(100vh - 8rem);
+    }
+        
 
     .hero__content {
         width: 90%;
@@ -18,7 +24,7 @@
         justify-content: center;
         align-items: center;
 
-        @media screen and (min-width: $breakpoint-6) {
+        @media screen and (min-width: $breakpoint-4) {
             width: 80%;
         }
 

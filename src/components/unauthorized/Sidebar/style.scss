@@ -1,8 +1,86 @@
 .sidebar__component{
     width: 100%;
-    height: 1500px;
+    width: 100%;
+    height: 1600px;
     background-color: lavender;
     border-radius: 1rem;
     margin-bottom: 20px;
-    padding: 1rem;
+    padding: 2rem 0;
+
+    .side__piece{
+        width: 85%;
+        margin: 0 auto;
+
+        .side__piece_author{
+            width: 100%;
+            height: 450px;
+            background-color: rgb(199, 172, 223);
+            margin-bottom: 2rem;
+        }
+
+        .side__piece_categories{
+            width: 100%;
+            height: 150px;
+            background-color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .side__piece_communities{
+            width: 100%;
+            height: 350px;
+            background-color: rgb(168, 192, 236);
+            margin-bottom: 2rem;
+        }
+
+        .side__piece_recents{
+            width: 100%;
+            height: 750px;
+            background-color: sandybrown;
+            margin-bottom: 2rem;
+        }
+
+        .side__piece_search{
+
+            margin-bottom: 2rem;
+            .search__box{
+                width: 100%;
+                width: 100%;
+                height: 50px;
+                border-radius: 1rem;
+                border: 1px solid #ccc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+
+                input{
+                    width: 90%;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    padding: 0 1rem;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    width: 100%;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: transparent;
+                }
+
+                button{
+                    width: 10%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }

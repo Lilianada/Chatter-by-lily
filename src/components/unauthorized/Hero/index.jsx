@@ -35,7 +35,10 @@ export default function Hero() {
             by talented writers.
           </h6>
         </div>
-        <button className="hero__button">Get started now</button>
+        <div className="hero__buttons">
+        <button className="hero__button">Get started</button>
+        <button className="border__button">Become a member</button>
+        </div>
       </div>
     </section>
   );
