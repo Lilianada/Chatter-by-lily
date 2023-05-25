@@ -52,12 +52,12 @@ export default function Header() {
                   isActive ? "active__link" : "nav__link"
                 }
               >
-                Sign In
+                Login
               </NavLink>
             </li>
             <li className="nav__item">
               <NavLink to="/signup" className="nav__button">
-                Get Started
+                Register
               </NavLink>
             </li>
           </ul>

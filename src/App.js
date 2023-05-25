@@ -3,6 +3,7 @@ import Header from './components/unauthorized/Header';
 import Hero from './components/unauthorized/Hero';
 import FeaturedPosts from './components/unauthorized/FeaturePosts';
 import Sidebar from './components/unauthorized/Sidebar';
+import CallToAction from './components/unauthorized/CTA';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <FeaturedPosts/>
         <Sidebar />
       </div>
+      <CallToAction/>
     </div>
   );
 }

@@ -24,10 +24,10 @@ export default function Hero() {
         <div className="hero__text">
           <h1 className="hero__title">
             Today
-            <span className="hero__title_colored"> a writer</span>
+            <span className="primary__text"> a writer</span>
             <br />
             Tomorrow
-            <span className="hero__title_colored"> a leader</span>
+            <span className="primary__text"> a leader</span>
           </h1>
           <h6 className="hero__description">
             Everyone has an opinion that needs to be heard, we provide you the
@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
         <div className="hero__buttons">
         <button className="hero__button">Get started</button>
-        <button className="border__button">Become a member</button>
+        <button className="hero__button_border">Become a member</button>
         </div>
       </div>
     </section>
