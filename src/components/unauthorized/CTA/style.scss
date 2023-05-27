@@ -2,11 +2,11 @@
 
 .cta__component {
     width: 100%;
-    padding: 4rem 0;
+    padding: 6rem 0;
     background-color: $white;
+    background-image: url('../../../assets/imgs/HeroBg.svg');
     display: grid;
     place-items: center;
-    margin: 2rem 0;
 
     .cta__description {
         width: 80%;
