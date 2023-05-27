@@ -54,8 +54,8 @@
             }
 
             .user{
-                width: 200px;
-                height: 180px;
+                width: 220px;
+                height: 150px;
                 display: grid;
                 place-items: center;
                 border: #e4e7ee 1px solid;
@@ -63,8 +63,8 @@
                 padding: 1rem;
 
                 img{
-                    width: 6rem;
-                    height: 6rem;
+                    width: 4rem;
+                    height: 4rem;
                     object-fit: cover;
                     border-radius: 50%;
                 }
@@ -79,7 +79,7 @@
 
                     .user__name{
                         font-family: $font-text;
-                        font-size: $font-sixteen;
+                        font-size: $font-fourteen;
                         font-weight: $font-weight-600;
                     }
 
@@ -96,6 +96,7 @@
     }
     .view__btn{
         border: none;
+        text-decoration: underline;
         background: none;
         outline: none;
         cursor: pointer;
