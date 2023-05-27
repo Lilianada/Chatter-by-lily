@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './style.scss';
 import axios from 'axios';
+import { MdVerified } from 'react-icons/md';
 
 export default function Communities() {
     const [users, setUsers] = useState([]);
@@ -29,11 +30,16 @@ export default function Communities() {
                 {users.map((user, index) => (
                     <div key={index} className='user'>
                         <img src={user.picture.large} alt="User" />
-                        <p className='user__name'>{`${user.name.first} ${user.name.last}`}</p>
+                        <div className="name__verify">
+                            <p className='user__name'>{`${user.name.first} ${user.name.last}`}</p>
+                            <MdVerified fill='#05a512' className='verified__icon' />
+                        </div>
                     </div>
                 ))}
             </div>
+
         </div>
+            <button className="view__btn">View all writers</button>
     </section>
   )
 }

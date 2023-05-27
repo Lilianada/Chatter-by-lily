@@ -5,6 +5,7 @@ import FeaturedPosts from './components/unauthorized/FeaturePosts';
 import Sidebar from './components/unauthorized/Sidebar';
 import CallToAction from './components/unauthorized/CTA';
 import Communities from './components/unauthorized/Communities';
+import Footer from './components/unauthorized/Footer';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       </div>
       <Communities/>
       <CallToAction/>
+      <Footer/>
     </div>
   );
 }

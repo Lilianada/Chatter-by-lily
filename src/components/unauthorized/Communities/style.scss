@@ -5,12 +5,12 @@
     height: 100%;
     display: grid;
     place-items: center;
-    margin: 2rem 0;
+    padding: 5rem 0;
+    border: 1px solid #f4f1f1;
 
     .communities__container {
         width: 90%;
-
-        margin: 0 auto;
+        margin: 0 auto 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -21,6 +21,7 @@
             display: grid;
             place-items: center;
             width: 70%;
+
             .title {
                 font-family: $font-text;
                 font-size: $font-thirtyTwo;
@@ -59,7 +60,8 @@
                 place-items: center;
                 border: #e4e7ee 1px solid;
                 border-radius: 10px;
-                padding: 1.5rem;
+                padding: 1rem;
+                // background-color: #e4e7ee;
 
                 img{
                     width: 6rem;
@@ -68,13 +70,49 @@
                     border-radius: 50%;
                 }
 
-                .user__name{
-                    font-family: $font-text;
-                    font-size: $font-sixteen;
-                    font-weight: $font-weight-500;
+                .name__verify{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
                     margin-top: 1rem;
+
+
+                    .user__name{
+                        font-family: $font-text;
+                        font-size: $font-sixteen;
+                        font-weight: $font-weight-600;
+                    }
+
+                    .verified__icon{
+                        width: 1rem;
+                        height: 1rem;
+
+                    }
                 }
+
             }
+        }
+
+    }
+    .view__btn{
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        font-family: $font-text;
+        font-size: $font-sixteen;
+        font-weight: $font-weight-500;
+        color: $black;
+        margin-top: 2rem;
+        transition: left 300ms ease-in-out;
+        
+        &:hover{
+            text-decoration: underline;
+        }
+
+        &:active{
+            transform: scale(0.9);
         }
     }
 }
