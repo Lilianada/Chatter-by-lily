@@ -37,7 +37,7 @@ export default function Header() {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/start-writing"
+                to="/write"
                 className={({ isActive }) =>
                   isActive ? "active__link" : "nav__link"
                 }
@@ -91,7 +91,7 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive ? "active__link" : "nav__link"
                 }
-                to="/about"
+                to="/resources"
               >
                 Resources
               </NavLink>
@@ -102,7 +102,7 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive ? "active__link" : "nav__link"
                 }
-                to="/about"
+                to="/write"
               >
                 Start Writing
               </NavLink>
@@ -113,14 +113,14 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive ? "active__link" : "nav__link"
                 }
-                to="/about"
+                to="/sigin"
               >
                 Sign In
               </NavLink>
             </li>
 
             <li className="nav__item">
-              <NavLink to="/" className="nav__button">
+              <NavLink to="/signup" className="nav__button">
                 Get Started
               </NavLink>
             </li>

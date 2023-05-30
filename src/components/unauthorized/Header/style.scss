@@ -40,6 +40,7 @@
             background: none;
             border: none;
             outline: none;
+            box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 10px;
         }
 
         .nav__bar {
@@ -189,6 +190,7 @@
                             font-size: $font-sixteen;
                             font-weight: $font-weight-500;
                             transition: all 0.3s ease-in-out;
+                            box-shadow:rgba(0, 0, 0, 0.2) 0px 0px 10px;
                         }
                     }
                 }
