@@ -3,40 +3,22 @@ import App from './App';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.scss';
+import Register from './components/authentication/Register';
+import Login from './components/authentication/Login';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
-  // {
-  //   path: "/about",
-  //   element: <AboutUs />,
-  // },
-  // {
-  //   path: "/contact",
-  //   element: <Contact />,
-  // },
-  // {
-  //   path: "/partner-with-us",
-  //   element: <Partner/>, 
-  // },
-  // {
-  //   path: "/registration-form",
-  //   element: <Registration/>
-  // },
-  // {
-  //   path: "/terms-and-conditions",
-  //   element: <Terms/>
-  // },
-  // {
-  //   path: "/privacy-policies",
-  //   element: <Policies/>
-  // },
-  // {
-  //   path: "*",
-  //   element: <Error />,
-  // },
+  {
+    path: "/registration-form",
+    element: <Register/>
+  },
+  {
+    path: "/login",
+    element: <Login/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

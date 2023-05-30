@@ -3,6 +3,10 @@ import './style.scss';
 
 export default function PopularPosts() {
   return (
-    <div>PopularPosts</div>
+    <article className='popular__component'>
+        <div className="popular__content">
+            
+        </div>
+    </article>
   )
 }
