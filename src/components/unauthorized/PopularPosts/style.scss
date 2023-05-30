@@ -1,0 +1,80 @@
+@import "../../../index.scss";
+
+.popular__component{
+    .popular__post{
+        width: 100%;
+        height: 750px;
+        margin-bottom: 5rem;
+        border-radius: 10px;
+
+        .popular__post_image{
+            width: 100%;
+            height: 550px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .popular__post_title{
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        .popular__post_text{
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .post__author_info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .post__author{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .post__author_image{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    margin-right: .5rem;
+                }
+
+                .post__author_name{
+                    font-size: $font-fourteen;
+                    font-weight: 400;
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        .post__details{
+            display: flex;
+            align-items: center;
+            
+            .post__category{
+                font-size: $font-fourteen;
+                font-weight: 400;
+                margin-right: .5rem;
+            }
+            
+            .post__minutes{
+                color: $lightGray;
+                font-size: $font-fourteen;
+                font-weight: 400;
+                margin-right: .5rem;
+            }
+
+            .post__date{
+                color: $lightGray;
+                font-size: $font-fourteen;
+                font-weight: 400;
+            }
+        }
+    }
+
+}

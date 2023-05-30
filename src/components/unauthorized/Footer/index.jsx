@@ -34,11 +34,10 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom">
-        <div className="logo">
-          <img src={logo} alt="Logo" />
-        </div>
-
         <div className="footer__right">
+          <div className="logo">
+            <img src={logo} alt="Logo" />
+          </div>
           <ul className="footer__list">
             <li className="footer__list_item">
               <a className="footer__link" href="/">
@@ -61,8 +60,8 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <p className="footer__text">&copy; 2021 Chatter. All rights reserved</p>
         </div>
+        <p className="footer__text">&copy; 2021 Chatter. All rights reserved</p>
       </div>
     </footer>
   );
