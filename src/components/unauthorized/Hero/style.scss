@@ -76,6 +76,7 @@
     
                 &:hover {
                     background-color: $primary;
+                    color: $white;
                 }
             }
 
@@ -95,57 +96,11 @@
     
                 &:hover {
                     background-color: $primary;
+                    color: $white;
+                    border: none;
                 }
             }
         }
 
-
-        // .doodle1 {
-        //     top: 40px;
-        //     right: 50px;
-        //     width: 50px;
-        //     position: absolute;
-        //     z-index: 2;
-        // }
-
-        // .doodle2 {
-        //     bottom: 50px;
-        //     left: 70px;
-        //     width: 30px;
-        //     position: absolute;
-        //     z-index: 2;
-        // }
-
-        // .doodle3 {
-        //     bottom: 4rem;
-        //     right: 23rem;
-        //     width: 30px;
-        //     position: absolute;
-        //     z-index: 2;
-        // }
-
-        // .doodle4 {
-        //     top: 170px;
-        //     left: 340px;
-        //     width: 45px;
-        //     position: absolute;
-        //     z-index: 2;
-        // }
-
-        // .doodle5 {
-        //     top: 235px;
-        //     right: 26%;
-        //     width: 65px;
-        //     position: absolute;
-        //     z-index: 2;
-        // }
-
-        // .doodle6 {
-        //     bottom: 10rem;
-        //     left: 28rem;
-        //     width: 45px;
-        //     position: absolute;
-        //     z-index: 2;
-        // }
     }
 }
