@@ -24,7 +24,7 @@
             margin: auto;
         }
 
-        .registeratio__signin {
+        .registeration__signin {
             display: none;
 
             @media screen and (min-width: $breakpoint-4) {
@@ -75,7 +75,7 @@
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 
                 &:hover {
-                    background-color: $primary;
+                    background-color: $black;
                     color: $white;
                     border: none;
                 }

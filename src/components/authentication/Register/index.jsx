@@ -1,14 +1,13 @@
 import React from 'react';
 import './style.scss';
 import { Link } from 'react-router-dom';
-
 import logo from "../../../assets/imgs/logo-white.png";
 
 export default function Register () {
   return (
     <section className="registeration__form">
       <div className="registeration__form__container">
-        <div className="registeratio__signin">
+        <div className="registeration__signin">
           <img src={logo} alt="Logo" />
           <h1 className='title'>Welcome Back!</h1>
           <p className='subtitle'>To keep connected with us please login with your personal info</p>
