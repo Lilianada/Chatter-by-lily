@@ -173,19 +173,19 @@ export default function FeaturedPosts() {
       ];
 
       // Generate 28 additional posts with random data
-      for (let i = 12; i < 30; i++) {
-        posts.push({
-          title: `Title alternate between true and false`,
-          excerpt: `Excerpt alternate between true and false. Use a common date for demonstration purposes. `,
-          author: `Author Doe`,
-          minutes: Math.floor(Math.random() * 20) + 1,
-          author_image: `https://source.unsplash.com/random/800x600?image=${i}`,
-          post_coverImage: `https://source.unsplash.com/random/800x600?image=${i}`,
-          verified: i % 2 === 0, // Alternate between true and false
-          date_posted: "Dec 22", // Use a common date for demonstration purposes
-          category: i % 2 === 0 ? "Lifestyle" : "Technology", // Alternate between categories
-        });
-      }
+      // for (let i = 12; i < 30; i++) {
+      //   posts.push({
+      //     title: `Title alternate between true and false`,
+      //     excerpt: `Excerpt alternate between true and false. Use a common date for demonstration purposes. `,
+      //     author: `Author Doe`,
+      //     minutes: Math.floor(Math.random() * 20) + 1,
+      //     author_image: `https://source.unsplash.com/random/800x600?image=${i}`,
+      //     post_coverImage: `https://source.unsplash.com/random/800x600?image=${i}`,
+      //     verified: i % 2 === 0, // Alternate between true and false
+      //     date_posted: "Dec 22", // Use a common date for demonstration purposes
+      //     category: i % 2 === 0 ? "Lifestyle" : "Technology", // Alternate between categories
+      //   });
+      // }
 
       setPostData(posts);
     };

@@ -24,7 +24,7 @@
             margin: auto;
         }
 
-        .login__signin {
+        .login__signup {
             display: none;
 
             @media screen and (min-width: $breakpoint-4) {
@@ -33,7 +33,7 @@
                 justify-content: center;
                 align-items: center;
                 padding: 2rem;
-                border-radius: 10px 0 0 10px;
+                border-radius: 0 10px 10px 0;
                 background-color: $primary;
                 background-image: url("../../../assets/imgs/HeroBg.svg");
             }
@@ -58,7 +58,7 @@
                 padding: 0;
             }
 
-            .signin__btn{
+            .signup__btn{
                 background-color: transparent;
                 color: $white;
                 font-size: $font-twenty;
@@ -75,14 +75,14 @@
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 
                 &:hover {
-                    background-color: $black;
-                    color: $white;
+                    background-color: $secondary;
+                    color: $primary;
                     border: none;
                 }
             }
         }
 
-        .login__signup {
+        .login__signin {
             background-color: $secondary;
             padding: 2rem;
             border-radius: 10px;
@@ -90,8 +90,8 @@
             grid-template-rows: 25% 75%;
 
             @media screen and (min-width: $breakpoint-4) {
-                padding: 2rem 4rem;
-                border-radius: 0 10px 10px 0;
+                padding: 4rem 4rem 2rem;
+                border-radius: 10px 0 0 10px;
             }
 
             .header {
@@ -136,8 +136,9 @@
                     line-height: $line-height-1-2;
                     transition: all 0.3s ease-in-out;
 
-                    &:focus {
+                    &:focus, &:active {
                         border: 1px solid $primary;
+                        background-color: #d9d6ee99;
                     }
 
                     &::placeholder {
@@ -148,8 +149,7 @@
                 .forgot__password{
                     border: none;
                     background-color: transparent;
-                    // text-decoration: underline;
-                    border-bottom: 1px solid $black;
+                    border-bottom: 1px solid $lightGray;
                     color: $black;
                     padding-bottom: .25rem;
                     font-weight: $font-weight-500;
@@ -162,7 +162,7 @@
                     }
                 }
 
-                .signup__btn {
+                .signin__btn {
                     background-color: $primary;
                     color: $white;
                     font-size: $font-twenty;
@@ -179,8 +179,9 @@
                     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 
                     &:hover {
-                        background-color: $primary;
-                        color: $white;
+                        border: 1px solid $primary;
+                        background-color: transparent;
+                        color: $black;
                     }
                 }
             }
