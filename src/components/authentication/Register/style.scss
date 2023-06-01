@@ -15,13 +15,18 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         display: flex;
+        justify-content: center;
 
         @media screen and (min-width: $breakpoint-4) {
             display: grid;
             grid-template-columns: 45% 55%;
-            width: 75%;
+            width: 90%;
             height: 80%;
             margin: auto;
+        }
+
+        @media screen and (min-width: $breakpoint-5) {
+            width: 75%;
         }
 
         .registeration__signin {
@@ -46,6 +51,7 @@
                 line-height: $line-height-1-2;
                 margin-top: 0.35rem;
                 padding: 0;
+                text-align: center;
             }
 
             .subtitle {
@@ -59,6 +65,7 @@
             }
 
             .signin__btn{
+                display: none;
                 background-color: transparent;
                 color: $white;
                 font-size: $font-twenty;
@@ -83,12 +90,12 @@
         }
 
         .registeration__signup {
-            background-color: $secondary;
+            background-color: $white;
             padding: 2rem;
             border-radius: 10px;
             display: grid;
-            grid-template-rows: 25% 75%;
-
+            grid-template-rows: 25% 70%;
+            
             @media screen and (min-width: $breakpoint-4) {
                 padding: 2rem 4rem;
                 border-radius: 0 10px 10px 0;
@@ -108,7 +115,7 @@
                 }
 
                 .subtitle {
-                    font-size: $font-eighteen;
+                    font-size: $font-sixteen;
                     font-weight: $font-weight-400;
                     color: $gray;
                     text-align: center;
@@ -124,8 +131,8 @@
 
                 .input__field {
                     width: 100%;
-                    height: 4rem;
-                    background-color: #d9d6ee99;
+                    height: 3.5rem;
+                    background-color: #ebedf8e8;
                     border-radius: 10px;
                     border: none;
                     padding: 0 1rem;
@@ -141,7 +148,7 @@
                     }
 
                     &::placeholder {
-                        color: $placeholder;
+                        color: $lightGray;
                     }
                 }
 
@@ -151,12 +158,12 @@
                     font-size: $font-twenty;
                     font-weight: $font-weight-400;
 
-                    width: 14rem;
+                    width: 100%;
                     height: 3.5rem;
                     font-weight: 400;
                     padding: 0.75rem;
                     border-radius: 10px;
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;
                     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
@@ -165,6 +172,28 @@
                         border: 1px solid $primary;
                         background-color: transparent;
                         color: $black;
+                    }
+                }
+
+                .signin__info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: .75rem;
+    
+                    .text{
+                        font-size: $font-fourteen;
+                        font-weight: $font-weight-400;
+                        color: $gray;
+                        margin-right: 0.5rem;
+                    }
+    
+                    .signin__text{
+                        color: $primary;
+                        cursor: pointer;
+                        font-size: $font-fourteen;
+                        font-weight: $font-weight-400;
                     }
                 }
             }

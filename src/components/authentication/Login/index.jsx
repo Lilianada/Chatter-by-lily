@@ -11,7 +11,7 @@ export default function Login() {
           <div className="header">
             <h1 className="title">Sign In</h1>
             <p className="subtitle">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              To keep connected with us please login with your personal info.
             </p>
           </div>
           <form className="form__wrap">
@@ -27,24 +27,31 @@ export default function Login() {
               placeholder="Password"
               className="input__field"
             />
-            <Link to="/" className="forgot__password">
-              Forgot your password?
+            <div className="flex">
+              <div className="remember__me">
+                <input type="checkbox" name="remember" id="remember" />
+                <label htmlFor="remember" className="remember__me__text">Remember Me</label>
+              </div>
+              <a href="/" className="forgot__password">
+                Forgot your password?
+              </a>
+            </div>
+            <button className="signin__btn">Sign In</button>
+          <div className="signup__info">
+            <p className="text">Do not have an account?</p>{" "}
+            <Link to={"/signup"} className="signup__text">
+              Sign Up
             </Link>
-            <Link to={"/siginin"}>
-              <button className="signin__btn">Sign In</button>
-            </Link>
+          </div>
           </form>
         </div>
         <div className="login__signup">
           <img src={logo} alt="Logo" />
           <h1 className="title">Hello Friend!</h1>
           <p className="subtitle">
-            Become our member by joining over 500,000 readers and writers over
-            the world.
+            Discover new writers, become a writer, and connect with the
+            community.
           </p>
-          <Link to={"/signup"}>
-          <button className="signup__btn">Sign Up</button>
-            </Link>
         </div>
       </div>
     </section>
