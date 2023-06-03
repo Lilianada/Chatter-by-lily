@@ -6,6 +6,7 @@ import Doodle3 from '../../../assets/Landing-Page-Doodles/Bookmark.png';
 import Doodle4 from '../../../assets/Landing-Page-Doodles/Stars1.png';
 import Doodle5 from '../../../assets/Landing-Page-Doodles/14.png';
 import Doodle6 from '../../../assets/Landing-Page-Doodles/Arrow4.png';
+import { Link } from "react-router-dom";
 // import the rest of your images...
 
 const doodles = [
@@ -36,8 +37,12 @@ export default function Hero() {
           </h6>
         </div>
         <div className="hero__buttons">
-        <button className="hero__button">Get started</button>
-        <button className="hero__button_border">Become a member</button>
+        <Link to="/signup">
+         <button className="hero__button">Get started</button> 
+          </Link>
+        <Link to="/signup">
+         <button  className="hero__button_border">Become a member</button> 
+         </Link>
         </div>
       </div>
     </section>

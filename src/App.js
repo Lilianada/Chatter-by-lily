@@ -1,24 +1,19 @@
 import React from 'react';
-import Header from './components/unauthorized/Header';
-import Hero from './components/unauthorized/Hero';
-import FeaturedPosts from './components/unauthorized/FeaturePosts';
-import Sidebar from './components/unauthorized/Sidebar';
-import CallToAction from './components/unauthorized/CTA';
-import Communities from './components/unauthorized/Communities';
-import Footer from './components/unauthorized/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Register from './components/authentication/Register';
+import Login from './components/authentication/Login';
+import LandingPage from './pages/LandingPage';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero/>
-      <div className='body__grid'>
-        <FeaturedPosts/>
-        <Sidebar />
-      </div>
-      <Communities/>
-      <CallToAction/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="*" element={<NotFound/>} />
+      </Routes>
+    </Router>
   );
 }

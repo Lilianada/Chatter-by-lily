@@ -113,7 +113,7 @@ export default function Header() {
                 className={({ isActive }) =>
                   isActive ? "active__link" : "nav__link"
                 }
-                to="/sigin"
+                to="/signin"
               >
                 Sign In
               </NavLink>
