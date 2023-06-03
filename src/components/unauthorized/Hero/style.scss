@@ -42,11 +42,15 @@
 
             .hero__description {
                 font-family: $font-text;
-                font-size: $font-twentyFour;
+                font-size: $font-twenty;
                 font-weight: $font-weight-400;
                 color: $gray;
                 text-align: center;
                 margin-bottom: 1rem;
+
+                @media screen and (min-width: $breakpoint-4) {
+                    font-size: $font-twentyFour;
+                }
             }
         }
 

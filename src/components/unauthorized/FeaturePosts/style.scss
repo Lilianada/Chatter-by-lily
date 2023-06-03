@@ -21,15 +21,23 @@
             }
 
             .popular__post_title{
-                font-size: 2rem;
+                font-size: $font-twentyFour;
                 font-weight: 600;
                 margin: 1rem 0;
+
+                @media screen and (min-width: $breakpoint-4){
+                    font-size: $font-thirtyTwo;
+                }
             }
 
             .popular__post_text{
-                font-size: 1.5rem;
+                font-size: $font-eighteen;
                 font-weight: 400;
                 margin-bottom: 1rem;
+
+                @media screen and (min-width: $breakpoint-4){
+                    font-size: $font-twenty;
+                }
             }
 
             .post__author_info{
@@ -110,9 +118,13 @@
                     .post__title{
                         text-align: left;
                         font-family: $font-text;
-                        font-size: $font-twentyFour;
+                        font-size: $font-twenty;
                         font-weight: 600;
                         margin-bottom: 1rem;
+
+                        @media screen and (min-width: $breakpoint-4){
+                            font-size: $font-twentyFour;
+                        }
                     }
     
                     .post__text{
@@ -121,62 +133,59 @@
                         font-weight: 400;
                     }
 
-                    .post__info{
+                    .post__wrap{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                         justify-content: space-between;
                         margin-top: 1rem;
 
-                        @media screen and (min-width: $breakpoint-4){
+                        .post__author_image{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+
+                        .post__info{
+                            display: flex;
                             flex-direction: column;
                             align-items: flex-start;
-                        }
-
-                        .post__author{
-                            display: flex;
-                            align-items: center;
                             justify-content: space-between;
-
-                            .post__author_image{
-                                width: 35px;
-                                height: 35px;
-                                border-radius: 50%;
-                                margin-right: .5rem;
-                            }
-
-                            .post__author_name{
-                                font-size: $font-fourteen;
-                                font-weight: 400;
-                                margin-right: .5rem;
-                            }
-                        }
-
-                        .post__details{
-                            display: flex;
-                            align-items: center;
-
-                            @media screen and (min-width: $breakpoint-4){
-                                margin-left: 2.75rem;
-                            }
-                            
-                            .post__category{
-                                font-size: $font-fourteen;
-                                font-weight: 400;
-                                margin-right: .5rem;
-                            }
-                            
-                            .post__minutes{
-                                color: $lightGray;
-                                font-size: $font-fourteen;
-                                font-weight: 400;
-                                margin-right: .5rem;
+    
+                            .post__author{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+    
+    
+                                .post__author_name{
+                                    font-size: $font-fourteen;
+                                    font-weight: 400;
+                                    margin-right: .15rem;
+                                }
                             }
     
-                            .post__date{
-                                color: $lightGray;
-                                font-size: $font-fourteen;
-                                font-weight: 400;
+                            .post__details{
+                                display: flex;
+                                align-items: center;
+                                
+                                .post__category{
+                                    font-size: $font-fourteen;
+                                    font-weight: 400;
+                                }
+                                
+                                .post__minutes{
+                                    color: $lightGray;
+                                    font-size: $font-fourteen;
+                                    font-weight: 400;
+                                }
+        
+                                .post__date{
+                                    color: $lightGray;
+                                    font-size: $font-fourteen;
+                                    font-weight: 400;
+                                }
                             }
                         }
                     }

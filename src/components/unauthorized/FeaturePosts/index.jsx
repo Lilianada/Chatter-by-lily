@@ -250,32 +250,34 @@ export default function FeaturedPosts() {
               <div className="post__body">
                 <h2 className="post__title">{post.title}</h2>
                 <p className="post__text">{post.excerpt}</p>
-                <div className="post__info">
-                  <div className="post__author">
-                    <img
-                      src={post.author_image}
-                      className="post__author_image"
-                      alt="Author"
-                    />
-                    <p className="post__author_name">{post.author}</p>
-                    {post.verified === true ? (
-                      <MdVerified
-                        className="post__verified_icon"
-                        fill="#05a512"
-                      />
-                    ) : (
-                      <GoUnverified
-                        className="post__verified_icon"
-                        fill="#f5a623"
-                      />
-                    )}
-                    <BsDot />
-                    <p className="post__category">{post.category}</p>
-                  </div>
-                  <div className="post__details">
-                    <p className="post__minutes">{post.minutes} min read</p>
-                    <BsDot />
-                    <p className="post__date">{post.date_posted}</p>
+                <div className="post__wrap">
+                  <img
+                    src={post.author_image}
+                    className="post__author_image"
+                    alt="Author"
+                  />
+                  <div className="post__info">
+                    <div className="post__author">
+                      <p className="post__author_name">{post.author}</p>
+                      {post.verified === true ? (
+                        <MdVerified
+                          className="post__verified_icon"
+                          fill="#05a512"
+                        />
+                      ) : (
+                        <GoUnverified
+                          className="post__verified_icon"
+                          fill="#f5a623"
+                        />
+                      )}
+                      <BsDot />
+                      <p className="post__category">{post.category}</p>
+                    </div>
+                    <div className="post__details">
+                      <p className="post__minutes">{post.minutes} min read</p>
+                      <BsDot />
+                      <p className="post__date">{post.date_posted}</p>
+                    </div>
                   </div>
                 </div>
               </div>
