@@ -52,7 +52,7 @@ export default function Register() {
             <button className="signup__btn">Sign Up</button>
           <div className="signin__info">
             <p className="text">Already have an account?</p>{" "}
-            <Link to={"/siginin"} className="signin__text">
+            <Link to={"/signin"} className="signin__text">
               Sign In
             </Link>
           </div>

@@ -17,7 +17,7 @@
         display: flex;
         justify-content: center;
 
-        @media screen and (min-width: $breakpoint-3) {
+        @media screen and (min-width: 600px) {
             width: 500px;
             height: 500px;
             margin: auto;
@@ -33,7 +33,7 @@
 
         @media screen and (min-width: $breakpoint-5) {
             max-width: 960px;
-            max-height: 640px;
+            max-height: 600px;
         }
 
         .login__signup {
@@ -88,9 +88,7 @@
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 
                 &:hover {
-                    background-color: $secondary;
-                    color: $primary;
-                    border: none;
+                    transform: scale(.95, 1);
                 }
             }
         }
@@ -104,16 +102,16 @@
 
             @media screen and (min-width: $breakpoint-4) {
                 display: grid;
-                grid-template-rows: 25% 55% 5%;
+                grid-template-rows: 30% 65%;
                 border-radius: 10px 0 0 10px;
             }
 
             @media screen and (min-width: $breakpoint-5) {
-                padding: 4rem 4rem 2rem;
+                padding: 4rem 2rem;
             }
 
             .header {
-                margin-bottom: 1rem;
+                // background-color: pink;
 
                 .title {
                     font-size: $font-forty;
@@ -137,11 +135,12 @@
 
             .form__wrap {
                 display: flex;
+                // background-color: red;
                 flex-direction: column;
                 align-items: flex-start;
                 margin-top: 2rem;
 
-                @media screen and (min-width: $breakpoint-4) {
+                @media screen and (min-width: $breakpoint-5) {
                     margin-top: 0;
                 }
 
@@ -271,9 +270,7 @@
                     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
 
                     &:hover {
-                        border: 1px solid $primary;
-                        background-color: transparent;
-                        color: $black;
+                        transform: scale(.95, 1);
                     }
                 }
             }

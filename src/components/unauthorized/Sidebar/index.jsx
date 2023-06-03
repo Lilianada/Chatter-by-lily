@@ -17,7 +17,7 @@ export default function Sidebar() {
         <div className="side__piece_search">
           <div className="search__box">
             <input type="text" placeholder='search' />
-            <button>search</button>
+            
           </div>
         </div>
 
