@@ -2,6 +2,8 @@ import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/imgs/logo-white.png";
+import { AiFillGoogleCircle } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 
 export default function Register() {
   return (
@@ -50,6 +52,14 @@ export default function Register() {
               className="input__field"
             />
             <button className="signup__btn">Sign Up</button>
+            <div className="socials__signin">
+              <button className="google__signin_btn">
+                <AiFillGoogleCircle size={28} fill="#c8ccda" />
+              </button>
+              <button className="facebook__signin_btn">
+                <BsFacebook size={24} fill="#c8ccda" />
+              </button>
+            </div>
           <div className="signin__info">
             <p className="text">Already have an account?</p>{" "}
             <Link to={"/signin"} className="signin__text">

@@ -1,9 +1,36 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import { auth, provider } from "../../../services/Firebase/Firebase";
+import { signInWithPopup } from "@firebase/auth";
+import { AiFillGoogleCircle } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 import logo from "../../../assets/imgs/logo-white.png";
 
-export default function Login() {
+export default function Login({ setIsAuth }) {
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        localStorage.setItem("isAuth", true);
+        setIsAuth(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const signInWithFacebook = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        localStorage.setItem("isAuth", true);
+        setIsAuth(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+
   return (
     <section className="login__form">
       <div className="login__form__container">
@@ -30,19 +57,29 @@ export default function Login() {
             <div className="flex">
               <div className="remember__me">
                 <input type="checkbox" name="remember" id="remember" />
-                <label htmlFor="remember" className="remember__me__text">Remember Me</label>
+                <label htmlFor="remember" className="remember__me__text">
+                  Remember Me
+                </label>
               </div>
               <a href="/" className="forgot__password">
                 Forgot your password?
               </a>
             </div>
             <button className="signin__btn">Sign In</button>
-          <div className="signup__info">
-            <p className="text">Do not have an account?</p>{" "}
-            <Link to={"/signup"} className="signup__text">
-              Sign Up
-            </Link>
-          </div>
+            <div className="socials__signin">
+              <button className="google__signin_btn" onClick={signInWithGoogle}>
+                <AiFillGoogleCircle size={28} fill="#c8ccda" />
+              </button>
+              <button className="facebook__signin_btn" onClick={signInWithFacebook}>
+                <BsFacebook size={24} fill="#c8ccda" />
+              </button>
+            </div>
+            <div className="signup__info">
+              <p className="text">Do not have an account?</p>{" "}
+              <Link to={"/signup"} className="signup__text">
+                Sign Up
+              </Link>
+            </div>
           </form>
         </div>
         <div className="login__signup">

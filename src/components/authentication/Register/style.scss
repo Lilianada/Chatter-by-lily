@@ -10,7 +10,7 @@
 
     .registeration__form__container {
         width: 90%;
-        height: 600px;
+        height: 650px;
         background-color: $white;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -19,7 +19,7 @@
 
         @media screen and (min-width: 600px) {
             width: 500px;
-            height: 600px;
+            height: 650px;
             margin: auto;
         }
 
@@ -27,13 +27,13 @@
             display: grid;
             grid-template-columns: 45% 55%;
             width: 90%;
-            height: 600px;
+            height: 650px;
             margin: auto;
         }
 
         @media screen and (min-width: $breakpoint-5) {
             max-width: 960px;
-            max-height: 640px;
+            max-height: 650px;
         }
 
         .registeration__signin {
@@ -144,7 +144,7 @@
                     background-color: #ebedf8e8;
                     border-radius: 10px;
                     border: none;
-                    padding: 0 1rem;
+                    padding: 1rem;
                     margin-bottom: 1rem;
                     font-size: $font-sixteen;
                     font-weight: $font-weight-400;
@@ -180,6 +180,18 @@
                     &:hover {
                         transform: scale(.95, 1);
                     }
+                }
+
+                .socials__signin{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin: 1rem auto;
+                    
+                    .google__signin_btn, .facebook__signin_btn{
+                        background-color: transparent;
+                    }
+    
                 }
 
                 .signin__info{

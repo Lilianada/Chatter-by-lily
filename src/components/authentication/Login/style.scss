@@ -10,7 +10,7 @@
 
     .login__form__container {
         width: 90%;
-        height: 500px;
+        height: 530px;
         background-color: $white;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -19,7 +19,7 @@
 
         @media screen and (min-width: 600px) {
             width: 500px;
-            height: 500px;
+            height: 530px;
             margin: auto;
         }
 
@@ -27,13 +27,13 @@
             display: grid;
             grid-template-columns: 55% 45%;
             width: 800px;
-            height: 600px;
+            height: 630px;
             margin: auto;
         }
 
         @media screen and (min-width: $breakpoint-5) {
             max-width: 960px;
-            max-height: 600px;
+            max-height: 630px;
         }
 
         .login__signup {
@@ -274,6 +274,19 @@
                     }
                 }
             }
+
+            .socials__signin{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin: 1rem auto;
+                
+                .google__signin_btn, .facebook__signin_btn{
+                    background-color: transparent;
+                }
+
+            }
+
 
             .signup__info {
                 display: flex;
