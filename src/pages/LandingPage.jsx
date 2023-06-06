@@ -4,7 +4,7 @@ import Hero from "../components/unauthorized/Hero/";
 import FeaturedPosts from "../components/unauthorized/FeaturePosts";
 import Sidebar from "../components/unauthorized/Sidebar/";
 import Communities from "../components/unauthorized/Communities/";
-import CallToAction from "../components/unauthorized/Communities"
+import CallToAction from "../components/unauthorized/CTA"
 import Footer from "../components/unauthorized/Footer";
 
 export default function LandingPage() {

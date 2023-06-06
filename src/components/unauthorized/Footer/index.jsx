@@ -11,7 +11,7 @@ export default function Footer() {
           <p className="text">
             Welcome to Chatter, the fun and easy way to chat with anyone,
             anywhere, anytime. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quisquam, voluptatum. Deserunt, soluta.
+            adipisicing elit.
           </p>
         </div>
         <div className="footer__top_component">
@@ -27,8 +27,7 @@ export default function Footer() {
           <p className="text">
             Welcome to Chatter, the fun and easy way to chat with anyone,
             anywhere, anytime. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit.
+            adipisicing elit.
           </p>
         </div>
       </div>
