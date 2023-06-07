@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
-import { auth, provider } from "../../../services/Firebase/Firebase";
+import {
+  auth,
+  googleProvider,
+  provider,
+} from "../../../services/Firebase/Firebase";
 import { signInWithPopup } from "@firebase/auth";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
@@ -9,7 +13,7 @@ import logo from "../../../assets/imgs/logo-white.png";
 
 export default function Login({ setIsAuth }) {
   const signInWithGoogle = () => {
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         localStorage.setItem("isAuth", true);
         setIsAuth(true);
@@ -29,7 +33,6 @@ export default function Login({ setIsAuth }) {
         console.log(error);
       });
   };
-
 
   return (
     <section className="login__form">
@@ -66,14 +69,7 @@ export default function Login({ setIsAuth }) {
               </a>
             </div>
             <button className="signin__btn">Sign In</button>
-            <div className="socials__signin">
-              <button className="google__signin_btn" onClick={signInWithGoogle}>
-                <AiFillGoogleCircle size={28} fill="#c8ccda" />
-              </button>
-              <button className="facebook__signin_btn" onClick={signInWithFacebook}>
-                <BsFacebook size={24} fill="#c8ccda" />
-              </button>
-            </div>
+           
             <div className="signup__info">
               <p className="text">Do not have an account?</p>{" "}
               <Link to={"/signup"} className="signup__text">
@@ -81,6 +77,17 @@ export default function Login({ setIsAuth }) {
               </Link>
             </div>
           </form>
+          <div className="socials__signin">
+              <button className="google__signin_btn" onClick={signInWithGoogle}>
+                <AiFillGoogleCircle size={28} fill="#c8ccda" />
+              </button>
+              <button
+                className="facebook__signin_btn"
+                onClick={signInWithFacebook}
+              >
+                <BsFacebook size={24} fill="#c8ccda" />
+              </button>
+            </div>
         </div>
         <div className="login__signup">
           <img src={logo} alt="Logo" />

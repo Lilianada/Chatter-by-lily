@@ -99,7 +99,7 @@
             padding: 2rem 3rem;
             border-radius: 10px;
             display: grid;
-            grid-template-rows: 25% 70%;
+            grid-template-rows: 20% 70% 10%;
 
             @media screen and (min-width: $breakpoint-3) {
                 padding: 2rem;
@@ -182,18 +182,7 @@
                     }
                 }
 
-                .socials__signin{
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    margin: 1rem auto;
-                    
-                    .google__signin_btn, .facebook__signin_btn{
-                        background-color: transparent;
-                    }
-    
-                }
-
+                
                 .signin__info{
                     display: flex;
                     flex-direction: row;
@@ -216,6 +205,19 @@
                     }
                 }
             }
+
+            .socials__signin{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin: 1rem auto;
+                
+                .google__signin_btn, .facebook__signin_btn{
+                    background-color: transparent;
+                }
+
+            }
+
         }
     }
 }

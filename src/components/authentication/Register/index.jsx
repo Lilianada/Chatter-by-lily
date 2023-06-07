@@ -52,14 +52,7 @@ export default function Register() {
               className="input__field"
             />
             <button className="signup__btn">Sign Up</button>
-            <div className="socials__signin">
-              <button className="google__signin_btn">
-                <AiFillGoogleCircle size={28} fill="#c8ccda" />
-              </button>
-              <button className="facebook__signin_btn">
-                <BsFacebook size={24} fill="#c8ccda" />
-              </button>
-            </div>
+            
           <div className="signin__info">
             <p className="text">Already have an account?</p>{" "}
             <Link to={"/signin"} className="signin__text">
@@ -67,6 +60,14 @@ export default function Register() {
             </Link>
           </div>
           </form>
+          <div className="socials__signin">
+              <button className="google__signin_btn">
+                <AiFillGoogleCircle size={28} fill="#c8ccda" />
+              </button>
+              <button className="facebook__signin_btn">
+                <BsFacebook size={24} fill="#c8ccda" />
+              </button>
+            </div>
         </div>
       </div>
     </section>

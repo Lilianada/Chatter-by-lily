@@ -27,13 +27,13 @@
             display: grid;
             grid-template-columns: 55% 45%;
             width: 800px;
-            height: 630px;
+            height: 600px;
             margin: auto;
         }
 
         @media screen and (min-width: $breakpoint-5) {
             max-width: 960px;
-            max-height: 630px;
+            max-height: 600px;
         }
 
         .login__signup {
@@ -102,7 +102,7 @@
 
             @media screen and (min-width: $breakpoint-4) {
                 display: grid;
-                grid-template-rows: 30% 65%;
+                grid-template-rows: 25% 65% 10%;
                 border-radius: 10px 0 0 10px;
             }
 
@@ -275,25 +275,12 @@
                 }
             }
 
-            .socials__signin{
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                margin: 1rem auto;
-                
-                .google__signin_btn, .facebook__signin_btn{
-                    background-color: transparent;
-                }
-
-            }
-
-
             .signup__info {
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
-                margin-top: 0.75rem;
+                margin: 0.75rem auto;
 
                 .text {
                     font-size: $font-fourteen;
@@ -310,5 +297,19 @@
                 }
             }
         }
+
+        .socials__signin{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem auto;
+            
+            .google__signin_btn, .facebook__signin_btn{
+                background-color: transparent;
+            }
+
+        }
+
+
     }
 }
