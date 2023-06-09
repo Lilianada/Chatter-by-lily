@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import NotFound from './pages/NotFound';
 import StartWriting from './pages/StartWriting';
 import Resources from './pages/Resources';
+import Home from './pages/Home';
 
 export default function App() {
   const [isAuth, setIsAuth] = React.useState(false);
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/signin" element={<Login setIsAuth={setIsAuth} />} />
+        <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>

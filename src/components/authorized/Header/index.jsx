@@ -5,7 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 
-export default function UnauthorizedHeader() {
+export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   const isActive = () => {

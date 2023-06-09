@@ -6,17 +6,21 @@ import {
   googleProvider,
   provider,
 } from "../../../services/Firebase/Firebase";
+import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "@firebase/auth";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import logo from "../../../assets/imgs/logo-white.png";
 
 export default function Login({ setIsAuth }) {
+  let navigate = useNavigate();
+
   const signInWithGoogle = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         localStorage.setItem("isAuth", true);
         setIsAuth(true);
+        navigate("/"); 
       })
       .catch((error) => {
         console.log(error);
