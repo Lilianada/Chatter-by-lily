@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import logo from "../../../assets/imgs/logo.png";
 import { GrClose } from "react-icons/gr";
-import { FiMenu } from "react-icons/fi";
+import { GiPencil } from "react-icons/gi";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
+import { BsChevronDown } from "react-icons/bs";
+import { CiBellOn, CiSearch } from "react-icons/ci";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,111 +19,99 @@ export default function Header() {
   };
 
   return (
-    <header className="unauthorized__header">
+    <header className="authorized__header">
       <div className="desktop__header">
-        <div className="header__logo">
-          <img src={logo} className="logo" alt="Chatter logo" />
-          <h2 className="logo__name">Chatter</h2>
+        <div className="header__left">
+          <div className="header__logo">
+            <img src={logo} className="logo" alt="Chatter logo" />
+            <h2 className="logo__name">Chatter</h2>
+          </div>
+          <div className="header__search">
+            <CiSearch size={22} fill="#aeadad" />
+            <input
+              type="text"
+              className="search__input"
+              placeholder="Search Chatter"
+              name="search"
+            />
+          </div>
         </div>
         <nav className="nav__bar">
           <ul className="nav__list">
             <li className="nav__item">
               <NavLink
-                to="/resources"
                 className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__link"
+                  isActive ? "active__link" : "nav__menu"
                 }
+                to="/notifications"
               >
-                Resources
+                <CiBellOn
+                  size={28}
+                  fill="#7f7d7d"
+                  className="notification__bell"
+                />
               </NavLink>
             </li>
             <li className="nav__item">
               <NavLink
+                className={({ isActive }) =>
+                  isActive ? "active__link" : "nav__link"
+                }
                 to="/write"
-                className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__link"
-                }
               >
-                Start Writing
+                <GiPencil size={24} fill="#7f7d7d" />
+               Write
               </NavLink>
             </li>
+
             <li className="nav__item">
-              <NavLink
-                to="/signin"
-                className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__link"
-                }
-              >
-                Login
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/signup" className="nav__button">
-                Register
+              <NavLink to="/signup" className="nav__menu">
+                <div className="profile"></div>
+                <BsChevronDown fill="#aeadad" size={10} />
               </NavLink>
             </li>
           </ul>
         </nav>
       </div>
 
-    {/* Mobile Header */}
+      {/* Mobile Header */}
       <div className="mobile__header">
-        <div className="header__logo">
-          <img src={logo} className="logo" alt="Chatter logo" />
-          <h2 className="logo__name">Chatter</h2>
+        <div className="header__left">
+          <div className="header__logo">
+            <img src={logo} className="logo" alt="Chatter logo" />
+            <h2 className="logo__name">Chatter</h2>
+          </div>
+          <div className="header__search">
+            <CiSearch size={22} fill="#aeadad" />
+            <input
+              type="text"
+              className="search__input"
+              placeholder="Search Chatter"
+              name="search"
+            />
+          </div>
         </div>
-        <button type="button" className="menu__button">
-          <FiMenu size={32} stroke="white" fill="white" onClick={isActive} />
-        </button>
-
-        <nav className={`nav__bar ${showMenu ? "show__navbar" : "nav__bar"}`}>
-          <button type="button" className="close__menu" onClick={closeMenu}>
-            <GrClose />
-          </button>
+        <nav className="nav__bar">
           <ul className="nav__list">
-            <li className="nav__item">
-              <h6 className="nav__title">Menu</h6>
-            </li>
-          </ul>
-
-          {/* Navigation List */}
-          <ul className="nav__list">
-            <li className="nav__item">
-            <NavLink
-                className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__link"
-                }
-                to="/resources"
-              >
-                Resources
-              </NavLink>
-            </li>
-
             <li className="nav__item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__link"
+                  isActive ? "active__link" : "nav__menu"
                 }
-                to="/write"
+                to="/notifications"
               >
-                Start Writing
+                <CiBellOn
+                  size={28}
+                  fill="#7f7d7d"
+                  className="notification__bell"
+                />
               </NavLink>
             </li>
 
             <li className="nav__item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__link"
-                }
-                to="/signin"
-              >
-                Sign In
-              </NavLink>
-            </li>
-
-            <li className="nav__item">
-              <NavLink to="/signup" className="nav__button">
-                Get Started
+              <NavLink to="/signup" className="nav__menu">
+                <div className="profile"></div>
+                <BsChevronDown fill="#aeadad" size={10} />
               </NavLink>
             </li>
           </ul>
