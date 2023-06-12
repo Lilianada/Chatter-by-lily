@@ -6,9 +6,11 @@ import "./style.scss";
 import { NavLink } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
 import { CiBellOn, CiSearch } from "react-icons/ci";
+import ProfileMenu from "../ProfileMenu";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
 
   const isActive = () => {
     setShowMenu(!showMenu);
@@ -16,6 +18,14 @@ export default function Header() {
 
   const closeMenu = () => {
     setShowMenu(false);
+  };
+
+  const profileActive = () => {
+    setShowProfile(!showProfile);
+  };
+
+  const closeProfile = () => {
+    setShowProfile(false);
   };
 
   return (
@@ -59,17 +69,18 @@ export default function Header() {
                 }
                 to="/write"
               >
-                <GiPencil size={24} fill="#7f7d7d" />
-               Write
+                <GiPencil size={20} fill="#7f7d7d" />
+                Write
               </NavLink>
             </li>
 
             <li className="nav__item">
-              <NavLink to="/signup" className="nav__menu">
+              <div className="nav__menu" onClick={profileActive}>
                 <div className="profile"></div>
                 <BsChevronDown fill="#aeadad" size={10} />
-              </NavLink>
+              </div>
             </li>
+            {showProfile && <ProfileMenu />}
           </ul>
         </nav>
       </div>
@@ -109,11 +120,14 @@ export default function Header() {
             </li>
 
             <li className="nav__item">
-              <NavLink to="/signup" className="nav__menu">
+              <div className="nav__menu" onClick={profileActive}>
                 <div className="profile"></div>
                 <BsChevronDown fill="#aeadad" size={10} />
-              </NavLink>
+              </div>
             </li>
+            <div className={`${showProfile ? "profile__modal" : "no__show"} `} onClick={closeProfile} >
+              <ProfileMenu />
+            </div>
           </ul>
         </nav>
       </div>

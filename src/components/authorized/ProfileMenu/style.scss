@@ -1,0 +1,14 @@
+@import "../../../index.scss";
+
+.profile__menu{
+    width: 12rem;
+    height: 17rem;
+    padding: 1rem;
+    background-color: $white;
+    box-shadow: $box-shadow-1;
+    border-radius: 10px;
+    // position: absolute;
+    // top: 6rem;
+    // right: 1rem;
+    // transition: top 0.8s ease-in-out;
+}
