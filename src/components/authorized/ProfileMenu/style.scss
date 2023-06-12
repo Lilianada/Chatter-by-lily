@@ -1,20 +1,99 @@
 @import "../../../index.scss";
 
-.profile__menu{
-    width: 12rem;
-    height: 17rem;
-    padding: 1rem;
+.profile__menu {
+    width: 270px;
+    height: fit-content;
+    padding: 1.5rem 0;
     background-color: $white;
     box-shadow: $box-shadow-1;
     border-radius: 10px;
 
-    .profile__list{
+    .profile__head {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        border-bottom: 1px solid #e7e6e699;
+        padding: 0 1rem 1rem;
+
+        .profile__image {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: $primary;
+            margin-right: 0.35rem;
+        }
+
+        .profile__dets{
+            display: flex;
+            flex-direction: column;
+
+            .profile__name{
+                font-size: $font-sixteen;
+                font-weight: $font-weight-600;
+            }
+
+            .profile__email{
+                font-size: $font-twelve;
+                color: $lightGray;
+            }
+        }
+    }
+
+    .profile__list {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
+        margin-top: 1rem;
+        padding: 0 1rem;
+        border-bottom: 1px solid #e7e6e699;
+
+        .profile__link {
+            margin-left: 1rem;
+
+            .link{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                font-weight: $font-weight-400;
+                color: $gray;
+                margin-bottom: 1rem;
+
+                &:hover{
+                    color: $primary;
+                }
+
+            }
+
+            .active__link{
+                color: $primary;
+                stroke: $primary;
+            }
+        }
+    }
+
+    .linkk{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem 2rem;
+        font-weight: $font-weight-400;
+        color: $gray;
+        border-bottom: 1px solid #e7e6e699;
+    }
+
+    .profile__bottom{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1rem 2rem 0rem;
+        gap: 1rem;
+
         .profile__link{
-            
+            .link{
+                font-weight: $font-weight-400;
+                color: $gray;
+            }
         }
     }
 }

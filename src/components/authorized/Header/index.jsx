@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import logo from "../../../assets/imgs/logo.png";
-import { GrClose } from "react-icons/gr";
-import { GiPencil } from "react-icons/gi";
+import { TfiPencilAlt } from "react-icons/tfi";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 import { BsChevronDown } from "react-icons/bs";
-import { CiBellOn, CiSearch } from "react-icons/ci";
+import {  CiSearch } from "react-icons/ci";
+import { HiOutlineBell } from "react-icons/hi2";
 import ProfileMenu from "../ProfileMenu";
 
 export default function Header() {
-  const [showMenu, setShowMenu] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const isActive = () => {
     setShowMenu(!showMenu);
-  };
-
-  const closeMenu = () => {
-    setShowMenu(false);
   };
 
   const profileActive = () => {
@@ -37,7 +33,7 @@ export default function Header() {
             <h2 className="logo__name">Chatter</h2>
           </div>
           <div className="header__search">
-            <CiSearch size={22} fill="#aeadad" />
+            <CiSearch size={22} fill="#827f7f" />
             <input
               type="text"
               className="search__input"
@@ -51,33 +47,32 @@ export default function Header() {
             <li className="nav__item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__menu"
-                }
-                to="/notifications"
-              >
-                <CiBellOn
-                  size={28}
-                  fill="#7f7d7d"
-                  className="notification__bell"
-                />
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                className={({ isActive }) =>
                   isActive ? "active__link" : "nav__link"
                 }
                 to="/write"
               >
-                <GiPencil size={20} fill="#7f7d7d" />
+                <TfiPencilAlt size={20} />
                 Write
               </NavLink>
             </li>
 
             <li className="nav__item">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "active__link" : "nav__menu"
+                }
+                to="/notifications"
+              >
+                <HiOutlineBell
+                  size={28}
+                  className="notification__bell"
+                />
+              </NavLink>
+            </li>
+            <li className="nav__item">
               <div className="nav__menu" onClick={profileActive}>
                 <div className="profile"></div>
-                <BsChevronDown fill="#aeadad" size={10} />
+                <BsChevronDown fill="#827f7f" size={10} />
               </div>
             </li>
             <div className={`${showProfile ? "profile__modal" : "no__show"} `} onClick={closeProfile} >
@@ -113,9 +108,8 @@ export default function Header() {
                 }
                 to="/notifications"
               >
-                <CiBellOn
+                <HiOutlineBell
                   size={28}
-                  fill="#7f7d7d"
                   className="notification__bell"
                 />
               </NavLink>
