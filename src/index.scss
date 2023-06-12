@@ -174,10 +174,9 @@ input{
     color: $primary;
 }
 
-// .App{
-//     height: 100vh;
-//     background-image: url('../src/assets/imgs/HeroBg.svg');
-//     background-position: top;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
+.App{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}

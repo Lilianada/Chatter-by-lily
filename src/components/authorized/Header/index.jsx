@@ -80,7 +80,9 @@ export default function Header() {
                 <BsChevronDown fill="#aeadad" size={10} />
               </div>
             </li>
-            {showProfile && <ProfileMenu />}
+            <div className={`${showProfile ? "profile__modal" : "no__show"} `} onClick={closeProfile} >
+              <ProfileMenu />
+            </div>
           </ul>
         </nav>
       </div>

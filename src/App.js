@@ -19,6 +19,7 @@ export default function App() {
   }, []);
 
   return (
+    <div className="App">
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -30,5 +31,6 @@ export default function App() {
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>
+    </div>
   );
 }
