@@ -3,7 +3,7 @@ import Header from '../components/authorized/Header'
 
 export default function Home() {
   return (
-    <div>
+    <div className="wrapper">
      <Header/>
     </div>
   )

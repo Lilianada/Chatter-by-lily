@@ -7,6 +7,7 @@ import NotFound from './pages/NotFound';
 import StartWriting from './pages/StartWriting';
 import Resources from './pages/Resources';
 import Home from './pages/Home';
+import Notification from './pages/Notification';
 
 export default function App() {
   const [isAuth, setIsAuth] = React.useState(false);
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/signup" element={<Register />} />
         <Route path="/signin" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/notification" element={<Notification/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </Router>

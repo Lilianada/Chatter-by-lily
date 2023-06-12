@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function StartWriting() {
   return (
-    <div>StartWriting</div>
+    <div className="wrapper">StartWriting</div>
   )
 }

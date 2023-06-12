@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Resources() {
   return (
-    <div>
+    <div className="wrapper">
       Resources
     </div>
   )

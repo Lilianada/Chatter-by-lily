@@ -9,7 +9,7 @@ import Footer from "../components/unauthorized/Footer";
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className="wrapper">
       <UnauthorizedHeader />
       <Hero />
       <div className="body__grid">
