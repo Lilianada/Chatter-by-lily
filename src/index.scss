@@ -11,6 +11,7 @@ $success: #05a512;
 $warning: #f5a623;
 $danger: #d0021b;
 $placeholder: #acaeb7;
+$border: #a4a4a499;
 
 @font-face {
     font-family: 'Megan';
@@ -175,7 +176,7 @@ input{
 }
 
 .App{
-    height: 100vh;
+    // height: 100vh;
     width: 100vw;
     position: relative;
     overflow: hidden;
@@ -184,4 +185,14 @@ input{
 .wrapper{
     display: grid;
     place-items: center;
+}
+
+.active__link{
+    color: $primary;
+    stroke: $primary;
+}
+
+.inactive__link{
+    color: $gray;
+    stroke: $gray;
 }

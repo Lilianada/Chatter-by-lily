@@ -12,7 +12,7 @@
         display: flex;
         align-items: center;
         gap: .5rem;
-        border-bottom: 1px solid #e7e6e699;
+        border-bottom: 1px solid $border;
         padding: 0 1rem 1rem;
 
         .profile__image {
@@ -45,7 +45,7 @@
         align-items: flex-start;
         margin-top: 1rem;
         padding: 0 1rem;
-        border-bottom: 1px solid #e7e6e699;
+        border-bottom: 1px solid $border;
 
         .profile__link {
             margin-left: 1rem;
@@ -54,9 +54,7 @@
                 display: flex;
                 align-items: center;
                 gap: .5rem;
-
                 font-weight: $font-weight-400;
-                color: $gray;
                 margin-bottom: 1rem;
 
                 &:hover{
@@ -65,10 +63,6 @@
 
             }
 
-            .active__link{
-                color: $primary;
-                stroke: $primary;
-            }
         }
     }
 
@@ -78,8 +72,8 @@
         gap: .5rem;
         padding: 1rem 2rem;
         font-weight: $font-weight-400;
-        color: $gray;
-        border-bottom: 1px solid #e7e6e699;
+        // color: $gray;
+        border-bottom: 1px solid $border;
     }
 
     .profile__bottom{
@@ -92,7 +86,7 @@
         .profile__link{
             .link{
                 font-weight: $font-weight-400;
-                color: $gray;
+                // color: $gray;
             }
         }
     }

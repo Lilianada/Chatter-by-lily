@@ -53,7 +53,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        border-top: 1px solid $gray;
+        border-top: 1px solid $border;
         padding: 1rem;
 
         @media screen and (min-width: $breakpoint-4) {

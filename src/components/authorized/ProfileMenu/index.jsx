@@ -26,7 +26,7 @@ export default function ProfileMenu() {
       <ul className="profile__list">
         <li className="profile__link">
           <NavLink to="/profile"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             <RxPerson size={20} fill="#7f7d7d" />
             Profile
@@ -34,7 +34,7 @@ export default function ProfileMenu() {
         </li>
         <li className="profile__link">
           <NavLink to="/write"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             <RxPencil2 size={20} fill="#7f7d7d" />
             Start Writing
@@ -42,7 +42,7 @@ export default function ProfileMenu() {
         </li>
         <li className="profile__link">
           <NavLink to="/bookmark"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             <IoBookmarksOutline size={20} fill="#7f7d7d" />
             Bookmark
@@ -50,7 +50,7 @@ export default function ProfileMenu() {
         </li>
         <li className="profile__link">
           <NavLink to="/stories"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             <CgNotes size={20} fill="#7f7d7d" />
             Stories
@@ -58,7 +58,7 @@ export default function ProfileMenu() {
         </li>
         <li className="profile__link">
           <NavLink to="/stats"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             <IoStatsChartOutline size={20} fill="#7f7d7d" />
             Stats
@@ -68,48 +68,50 @@ export default function ProfileMenu() {
       <ul className="profile__list">
         <li className="profile__link">
           <NavLink to="/settings"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             Settings
           </NavLink>
         </li>
         <li className="profile__link">
           <NavLink to="/support"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             Support
           </NavLink>
         </li>
         <li className="profile__link">
           <NavLink to="/signout"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             Sign out
           </NavLink>
         </li>
       </ul>
-      <NavLink to="/become-member" className="linkk">
+      <NavLink to="/become-member" className={({ isActive }) =>
+                  isActive ? "linkk active__link" : "linkk inactive__link"
+                }>
         Become a member 
         <GrStar fill="#f5a623" />
       </NavLink>
       <ul className="profile__bottom">
         <li className="profile__link">
           <NavLink to="/about"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
            About
           </NavLink>
         </li>
         <li className="profile__link">
           <NavLink to="/privacy"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             Privacy
           </NavLink>
         </li>
         <li className="profile__link">
           <NavLink to="/terms"  className={({ isActive }) =>
-                  isActive ? "active__link" : "link"
+                  isActive ? "link active__link" : "link inactive__link"
                 }>
             Terms
           </NavLink>
