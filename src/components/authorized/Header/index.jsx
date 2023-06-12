@@ -59,13 +59,15 @@ export default function Header() {
             <li className="nav__item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__menu notification"
+                  isActive ? "active__link" : "nav__menu"
                 }
                 to="/notification"
               >
-                <HiOutlineBell
-                  size={20}
-                />
+                <div className="notification__bell">
+                  <HiOutlineBell
+                    size={20}
+                  />
+                </div>
               </NavLink>
             </li>
             <li className="nav__item">
@@ -103,13 +105,15 @@ export default function Header() {
             <li className="nav__item">
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "active__link" : "nav__menu notification"
+                  isActive ? "active__link" : "nav__menu"
                 }
                 to="/notification"
               >
-                <HiOutlineBell
-                  size={20}
-                />
+                <div className="notification__bell">
+                  <HiOutlineBell
+                    size={20}
+                  />
+                </div>
               </NavLink>
             </li>
 

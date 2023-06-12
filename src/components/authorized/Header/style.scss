@@ -95,7 +95,7 @@
                         }
                     }
 
-                    .notification {
+                    .nav__menu .notification__bell {
                         width: 2rem;
                         height: 2rem;
                         border: 1px solid $placeholder;
@@ -111,6 +111,26 @@
 
                     .active__link {
                         color: $primary;
+                        display: flex;
+                        align-items: center;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        gap: 0.35rem;
+                    }
+
+                    .active__link .notification__bell {
+                        width: 2rem;
+                        height: 2rem;
+                        border: 1px solid $primary;
+                        border-radius: 50%;
+                        display: grid;
+                        place-items: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            border: 1px solid $primary;
+                        }
                     }
                 }
 
@@ -238,7 +258,7 @@
                             }
                         }
 
-                        .notification {
+                        .nav__menu .notification__bell {
                             width: 2rem;
                             height: 2rem;
                             border: 1px solid $gray;
@@ -268,6 +288,26 @@
 
                         .active__link {
                             color: $primary;
+                            display: flex;
+                            align-items: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                            gap: 0.35rem;
+                        }
+
+                        .active__link .notification__bell {
+                            width: 2rem;
+                            height: 2rem;
+                            border: 1px solid $primary;
+                            border-radius: 50%;
+                            display: grid;
+                            place-items: center;
+                            cursor: pointer;
+
+                            &:hover {
+                                border: 1px solid $primary;
+                            }
                         }
                     }
 
