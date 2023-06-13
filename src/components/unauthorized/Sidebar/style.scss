@@ -3,21 +3,23 @@
 .sidebar__component{
     width: 100%;
     width: 100%;
-    height: 1600px;
-    // background-color: lavender;
-    // border-left: 1px solid $border;
-    margin-bottom: 20px;
-    padding: 0 0 2rem;
+    height: fit-content;
 
     .side__piece{
-        width: 85%;
+        width: 90%;
+        max-width: 340px;
         margin: 0 auto;
+        
+        @media screen and (min-width: $breakpoint-3) {
+            width: 85%;
+        }
 
         .side__piece_author{
             width: 100%;
             box-shadow: $box-shadow-1;
             height: fit-content;
             margin-bottom: 2rem;
+            background-color: $white;
 
             .author__header{
                 font-size: $font-eighteen;
@@ -69,6 +71,7 @@
             box-shadow: $box-shadow-1;
             height: fit-content;
             margin-bottom: 2rem;
+            background-color: $white;
             
             .categories__header{
                 font-size: $font-eighteen;
@@ -108,7 +111,7 @@
             box-shadow: $box-shadow-1;
             margin-bottom: 2rem;
             padding: 1rem;
-            // border-radius: 10px;
+            background-color: $white;
 
             .cta__container{
                 height: 100%;
@@ -143,9 +146,67 @@
 
         .side__piece_recents{
             width: 100%;
-            height: 750px;
-            background-color: sandybrown;
+            height: fit-content;
+            background-color: $white;
+            padding-bottom: 1rem;
             margin-bottom: 2rem;
+            box-shadow: $box-shadow-1;
+
+            .recent__header{
+                font-size: $font-eighteen;
+                font-weight: $font-weight-600;
+                padding: 1rem;
+                border-bottom: .5px solid rgba(0, 0, 0, 0.25);
+            }
+            
+            .recent__list{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 1rem;
+                align-items: center;
+                gap: 1.25rem;
+                
+                .recent{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: start;
+                    gap: .35rem;
+
+                    .author__dets{
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+
+                        .author__img{
+                            width: 2rem;
+                            height: 2rem;
+                            border-radius: 50%;
+                        }
+
+                        .author__names{
+                            font-size: $font-fourteen;
+                            font-weight: $font-weight-600;
+                        }
+                    }
+
+                    .recent__topic{
+                        font-size: $font-sixteen;
+                        font-weight: $font-weight-600;
+
+                    }
+
+                    .recent__date{
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+
+                        .date, .recent__read{
+                            font-size: $font-twelve;
+                            color: $lightGray;
+                        }
+                    }
+                }
+            }
         }
 
         .side__piece_search{

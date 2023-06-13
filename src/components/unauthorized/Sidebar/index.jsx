@@ -1,11 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import './style.scss';
-import { Categories } from '../../../mockData';
-import axios from 'axios';
-
+import React, { useState, useEffect } from "react";
+import "./style.scss";
+import { Categories, Posts } from "../../../mockData";
+import { BsDot } from "react-icons/bs";
+import axios from "axios";
 
 export default function Sidebar() {
   const [users, setUsers] = useState([]);
+  const [postData, setPostData] = useState([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -22,60 +23,75 @@ export default function Sidebar() {
 
     fetchUsers();
   }, []);
+
+  useEffect(() => {
+    const generatePostData = () => {
+      setPostData(Posts);
+    };
+
+    generatePostData();
+  }, []);
+
   return (
-    <aside className='sidebar__component'>
+    <aside className="sidebar__component">
       <div className="side__piece">
         <div className="side__piece_author">
-          <h3 className="author__header">
-            Popular Authors
-          </h3>
+          <h3 className="author__header">Popular Authors</h3>
           <div className="authors__list">
-            {
-              users.map((user, idx) => {
-                return (
-                  <div className="author" key={idx}>
-                    <img src={user.picture.thumbnail} alt="User" className="author__img" />
-                    <div className="author__dets">
+            {users.map((user, idx) => {
+              return (
+                <div className="author" key={idx}>
+                  <img
+                    src={user.picture.thumbnail}
+                    alt="User"
+                    className="author__img"
+                  />
+                  <div className="author__dets">
                     <p className="author__name">{`${user.name.first} ${user.name.last}`}</p>
                     <p className="author__about">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    </div>
                   </div>
-                )
-              })
-            }
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="side__piece_recents">
-          our lovely posts
-        </div>
-        <div className="side__piece_categories">
-            <h3 className="categories__header">
-              Recommended categories
-            </h3>
-          <div className="categories__list">
-            {
-              Categories.map((item, idx) =>{
+          <h3 className="recent__header">Recently saved</h3>
+          <div className="recent__list">
+            {postData.map((post, idx) => {
+              if (idx < users.length) {
+                const user = users[idx];
                 return (
-                  <p className="category" key={idx}>{item}</p>
-                )
-              })
-            }
+                  <div className="recent" key={idx}>
+                    <div className="author__dets">
+                      <img
+                        src={user.picture.thumbnail}
+                        alt="User"
+                        className="author__img"
+                      />
+                      <p className="author__names">{`${user.name.first} ${user.name.last}`}</p>
+                    </div>
+                    <h3 className="recent__topic"> {post.title} </h3>
+                    <div className="recent__date">
+                      <p className="date">{post.date_posted}, 2023</p>
+                      <BsDot />
+                      <p className="recent__read">{post.minutes} minutes</p>
+                    </div>
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
-          <button className="see__more">See more categories</button>
         </div>
         <div className="side__piece_cta">
           <div className="cta__container">
-            <h3 className="cta__header">
-              Become PRO now
-            </h3>
-            <p className="cta__text">
-              ...and enjoy all the great benefits
-            </p>
-            <button className="cta__button">
-              Get started
-            </button>
+            <h3 className="cta__header">Become PRO now</h3>
+            <p className="cta__text">...and enjoy all the great benefits</p>
+            <button className="cta__button">Get started</button>
           </div>
         </div>
         {/* <div className="side__piece_search">
@@ -83,8 +99,7 @@ export default function Sidebar() {
             <input type="text" placeholder='search' />
           </div>
         </div> */}
-
       </div>
     </aside>
-  )
+  );
 }

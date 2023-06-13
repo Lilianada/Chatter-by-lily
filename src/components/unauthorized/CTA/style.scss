@@ -9,14 +9,19 @@
     place-items: center;
 
     .cta__description {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         text-align: center;
         font-family: $font-text;
-        font-size: $font-fortyTwo;
+        font-size: $font-thirtySix;
         font-weight: $font-weight-500;
         line-height: 1.2;
         color: $black;
+
+        @media screen and (min-width: $breakpoint-2) {
+            width: 80%;
+            font-size: $font-fortyTwo;
+        }
     }
 
     .cta__button {

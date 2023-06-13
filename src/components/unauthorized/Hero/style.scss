@@ -56,10 +56,16 @@
 
         .hero__buttons{
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 1.5rem;
+            gap: .5rem;
             margin: 0 auto;
+            
+            @media screen and (min-width: $breakpoint-3) {
+                gap: 1.5rem;
+                
+            }
             
             @media screen and (min-width: $breakpoint-4) {
                 justify-content: space-between;
