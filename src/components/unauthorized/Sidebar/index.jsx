@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./style.scss";
 import { Categories, Posts } from "../../../mockData";
 import { BsDot } from "react-icons/bs";
 import axios from "axios";
+import "./style.scss";
 
 export default function Sidebar() {
   const [users, setUsers] = useState([]);
